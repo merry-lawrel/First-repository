@@ -1,0 +1,17 @@
+package first;
+
+public class one {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int item A = 10;
+		int item B = 50;
+		int item C = 100;
+		double totalprice = item A + item B + item C;
+		double disprice = totalprice - (0.1 * totalprice);
+		double amountpayable = disprice + (0.05 * disprice);
+		system.out.println('Net amount paid by John' + amountpayable);
+
+	}
+
+}
