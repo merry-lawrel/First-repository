@@ -31,14 +31,14 @@ python app.py
 | POST | /register | To sign up a new user account |
 | POST | /auth |To authenticate an existing user account |
 | GET | /items | To view every item and it's price, in each store |
-| GET | /item/<id> | To view details of the required item |
-| GET | /store/<name> | To view details of the required store |
-| POST | /store/<name> | To insert details of a new store|
-| DELETE | /store/<name> | To delete a specific store |
+| GET | /item/{id} | To view details of the required item |
+| GET | /store/{name} | To view details of the required store |
+| POST | /store/{name} | To insert details of a new store|
+| DELETE | /store/{name} | To delete a specific store |
 | GET | /stores | To view details of all the stores |
-| POST | /item/<id> | To insert details of an item in a specific store using store ID |
-| PUT | /item/<id> | To update details of an item in a specific store using store ID |
-| DELETE | /item/<id> | To delete an item in a specific store using store ID |
+| POST | /item/{id} | To insert details of an item in a specific store using store ID |
+| PUT | /item/{id} | To update details of an item in a specific store using store ID |
+| DELETE | /item/{id} | To delete an item in a specific store using store ID |
 
 ### Technologies Used
 * [Flask](https://flask.palletsprojects.com/) Flask is a micro web framework written in Python. It is classified as a microframework because it does not require particular tools or libraries.
