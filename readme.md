@@ -27,7 +27,7 @@ python app.py
 ### API Endpoints
 
 | HTTP Verbs | Endpoints | Action |
-| --- | --- | --- |
+| --- | --------- | --- |
 | POST | /register | To sign up a new user account |
 | POST | /auth |To authenticate an existing user account |
 | GET | /items | To view every item and it's price, in each store |
