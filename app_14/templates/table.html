@@ -1,0 +1,31 @@
+{% extends 'index.html' %}
+{% block content %}
+<section class="post-news-area section-padding-100-0 mb-70">
+    <div class="container">
+        <div class="row justify-content-center">
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <th>Recipe Name</th>
+                    <th>Picture</th>
+                    <th>Ingredients Required</th>
+                    <th>Method</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+                {% for i in data %}
+                <tr>
+                    <td>{{i.id}}</td>
+                    <td class="col-2">{{i.recipe_name}}</td>
+                    <td class="col-2"><img src="{{i.recipe_image.url}}" style="width: 200px;"></td>
+                    <td>{{i.ingredients}}</td>
+                    <td>{{i.instructions}}</td>
+                    <td><a href="{% url 'edit' id=i.id %}"><button>Edit</button></a></td>
+                    <td><a href="{% url 'delete' id=i.id %}"><button>Delete</button></a></td>
+                </tr>
+                {% endfor %}
+            </table>
+        </div>
+    </div>
+</section>
+{% endblock %}

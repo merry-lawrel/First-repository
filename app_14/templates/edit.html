@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {% for i in data %}
+    <form action="{% url 'update' id=i.id %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        <div class="row">
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="form-group mb-30">
+                    <input type="text" class="form-control" id="recipe" name="recipe_name" placeholder="Recipe Name" value="{{i.recipe_name}}"> 
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="form-group mb-30">
+                    <input type="file" class="form-control" id="recipe" name="recipe_image" placeholder="Recipe Image">
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="form-group mb-30">
+                    <input type="text area" placeholder="Enter ingredients" class="form-control" id="ingredients" name="ingredients" value="{{i.ingredients}}">
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-6 col-lg-3">
+                <div class="form-group mb-30">
+                    <input type="text area" placeholder="Enter instructions" class="form-control" id="ingredients" name="instructions" value="{{i.instructions}}">
+                </div>
+            </div>
+
+            <div class="col-12 col-sm-12 col-lg-12">
+                <div>
+                    <input type="submit" class="btn bueno-btn w-100">Submit</button>
+                </div>
+            </div>
+        </div>
+    </form>
+    {% endfor %}
+</body>
+</html>

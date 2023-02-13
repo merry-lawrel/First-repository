@@ -1,0 +1,48 @@
+{% extends 'index.html' %}
+{% block content %}
+<!-- ##### Search Area Start ##### -->
+<div class="bueno-search-area section-padding-100-0 pb-70 bg-img" style="background-image: url(../static/img/core-img/pattern.png);">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <form action="{% url 'getdata' %}" method="post" enctype="multipart/form-data">
+                    {% csrf_token %}
+                    <div class="row">
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="form-group mb-30">
+                                <input type="text" class="form-control" id="recipe" name="recipe_name" placeholder="Recipe Name"> 
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="form-group mb-30">
+                                <input type="file" class="form-control" id="recipe" name="recipe_image" placeholder="Recipe Image">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="form-group mb-30">
+                                <input type="text area" placeholder="Enter ingredients" class="form-control" id="ingredients" name="ingredients">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-6 col-lg-3">
+                            <div class="form-group mb-30">
+                                <input type="text area" placeholder="Enter instructions" class="form-control" id="ingredients" name="instructions">
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-sm-12 col-lg-12">
+                            <div>
+                                <input type="submit" class="btn bueno-btn w-100">Submit</button>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- ##### Search Area End ##### -->
+
+{% endblock %}
